@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.vertical{
+    writing-mode: vertical-rl;
+transform: rotate(180deg);
+}
