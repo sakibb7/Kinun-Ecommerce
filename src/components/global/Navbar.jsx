@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { logo } from "../assets";
-import { navLinks } from "../constants";
+import { logo } from "../../assets";
+import { navLinks } from "../../constants";
 
 //icons
 import { HiOutlineSearch } from "react-icons/hi";
@@ -11,7 +11,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 export const Navbar = () => {
   return (
     <nav>
-      <div className="flex justify-between items-center max-w-screen-xl mx-auto py-[20px]">
+      <div className="flex justify-between items-center max-w-screen-xl mx-auto py-[20px] block">
         <div className="">
           <img src={logo} alt="" />
         </div>
