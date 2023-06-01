@@ -1,6 +1,11 @@
+import { useContext } from "react";
 import { products } from "../../constants";
+import { ShopContext } from "../../context/shop-context";
 
 const Products = () => {
+  const { addToCart, cartItems } = useContext(ShopContext);
+  const cartItemsAmount = cartItems[products.id];
+
   return (
     <div className="max-w-screen-xl mx-auto pb-16">
       <h2 className="text-2xl my-8 py-1 border-l-[3px] border-mainColor">
@@ -19,13 +24,17 @@ const Products = () => {
               </div>
               <div className="flex justify-between items-center font-[500] text-[15px] border-t border-inherit pt-3">
                 <p className="text-mainColor font-[500] text-[15px] line-through">
-                  {originalPrice}
+                  ${originalPrice}
                 </p>
-                <p className="text-ashColor">{discountedPrice}</p>
-                <div className="text-[20px] font-[400] flex justify-center items-center gap-2">
-                  <span>╶╴</span>
-                  <span className="bg-slate-200 px-3 py-1">0</span>
-                  <span>+</span>
+                <p className="text-ashColor">${discountedPrice}</p>
+                <div className="text-[14px] font-[400] bg-slate-200 p-2 rounded-lg">
+                  <button onClick={() => addToCart(id)}>
+                    {cartItems[id] > 0 ? (
+                      <>Added to Cart({cartItems[id]})</>
+                    ) : (
+                      <>Add to Cart</>
+                    )}
+                  </button>
                 </div>
               </div>
             </div>

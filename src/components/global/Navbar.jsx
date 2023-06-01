@@ -24,11 +24,13 @@ export const Navbar = () => {
             ))}
           </ul>
         </div>
-        <div className="flex justify-center items-center gap-4">
-          <HiOutlineSearch />
+        <div className="flex justify-center items-center gap-4 text-[22px]">
+          {/* <HiOutlineSearch />
           <FaRegUser />
-          <FcLike />
-          <AiOutlineShoppingCart />
+          <FcLike /> */}
+          <Link to="/cart">
+            <AiOutlineShoppingCart />
+          </Link>
         </div>
       </div>
     </nav>
