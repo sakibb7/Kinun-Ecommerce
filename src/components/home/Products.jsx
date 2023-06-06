@@ -1,11 +1,11 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { products } from "../../constants";
 import { ShopContext } from "../../context/shop-context";
 
 const Products = () => {
   const { addToCart, cartItems, removeFromCart, updateCartItemCount } =
     useContext(ShopContext);
-  // const cartItemsAmount = cartItems[products.id];
 
   return (
     <div className="max-w-screen-xl mx-auto pb-16">
@@ -21,7 +21,9 @@ const Products = () => {
               </div>
               <div className="text-[rgb(250,179,17)] text-[20px]">{rating}</div>
               <div>
-                <h3 className="text-[18px]">{title}</h3>
+                <Link to={title}>
+                  <h3 className="text-[18px]">{title}</h3>
+                </Link>
               </div>
               <div className="flex justify-between items-center font-[500] text-[15px] border-t border-inherit pt-3">
                 <p className="text-mainColor font-[500] text-[15px] line-through">

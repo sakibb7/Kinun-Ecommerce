@@ -2,7 +2,15 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 import { Navbar } from "./components/global/Navbar";
-import { Home, About, Blog, Contact, Shop, Cart } from "./pages";
+import {
+  Home,
+  About,
+  Blog,
+  Contact,
+  Shop,
+  Cart,
+  SingleProductPage,
+} from "./pages";
 import { ShopContextProvider } from "./context/shop-context";
 
 function App() {
@@ -18,6 +26,8 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/shop/:title" element={<SingleProductPage />} />
+            <Route path="/:title" element={<SingleProductPage />} />
           </Routes>
         </Router>
       </ShopContextProvider>

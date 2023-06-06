@@ -37,7 +37,7 @@ export const products = [
     {
         id:1,
         image:product1,
-        title:"Accesories Lather Shoes",
+        title:"Lather-Shoes",
         rating:"★★★★☆",
         originalPrice: "223.23",
         discountedPrice: "150.49",
@@ -46,7 +46,7 @@ export const products = [
     {
         id:2,
         image:product2,
-        title:"Accesories Lather Shoes",
+        title:"product 2",
         rating:"★★★★☆",
         originalPrice: "223.23",
         discountedPrice: "150.49",
@@ -55,7 +55,7 @@ export const products = [
     {
         id:3,
         image:product3,
-        title:"Accesories Lather Shoes",
+        title:"product 3",
         rating:"★★★★☆",
         originalPrice: "223.23",
         discountedPrice: "150.49",
@@ -64,7 +64,7 @@ export const products = [
     {
         id:4,
         image:product4,
-        title:"Accesories Lather Shoes",
+        title:"product 4",
         rating:"★★★★☆",
         originalPrice: "223.23",
         discountedPrice: "150.49",
@@ -72,7 +72,7 @@ export const products = [
     {
         id:5,
         image:product1,
-        title:"Accesories Lather Shoes",
+        title:"product 5",
         rating:"★★★★☆",
         originalPrice: "223.23",
         discountedPrice: "150.49",
@@ -81,7 +81,7 @@ export const products = [
     {
         id:6,
         image:product2,
-        title:"Accesories Lather Shoes",
+        title:"product 6",
         rating:"★★★★☆",
         originalPrice: "223.23",
         discountedPrice: "150.49",
@@ -90,7 +90,7 @@ export const products = [
     {
         id:7,
         image:product3,
-        title:"Accesories Lather Shoes",
+        title:"product 7",
         rating:"★★★★☆",
         originalPrice: "223.23",
         discountedPrice: "150.49",
@@ -99,7 +99,7 @@ export const products = [
     {
         id:8,
         image:product4,
-        title:"Accesories Lather Shoes",
+        title:"product 8",
         rating:"★★★★☆",
         originalPrice: "223.23",
         discountedPrice: "150.49",
