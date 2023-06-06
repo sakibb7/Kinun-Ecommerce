@@ -1,4 +1,4 @@
-import { Hero, Feature, Coupon, Products } from "../components";
+import { Hero, Feature, Coupon, Products, Footer } from "../components";
 
 const Home = () => {
   return (
@@ -7,6 +7,7 @@ const Home = () => {
       <Feature />
       <Coupon />
       <Products />
+      <Footer />
     </div>
   );
 };

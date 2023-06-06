@@ -17,23 +17,23 @@ const CartItems = (props) => {
         </p>
       </div>
 
-      <div className="flex justify-center text-[14px] gap-4">
+      <div className="flex justify-center text-[18px] gap-4">
         <button
-          className="border p-[5px] bg-slate-500 text-white rounded-xl px-[10px]"
+          className="border] bg-slate-500 text-white rounded-xl px-[20px]"
           onClick={() => addToCart(id)}
         >
-          Add
+          +
         </button>
         <input
           value={cartItems[id]}
           onChange={(e) => updateCartItemCount(Number(e.target.value), id)}
-          className="items-center w-[30px] border p-[10px]"
+          className="text-center w-[50px] border"
         />
         <button
-          className="border p-[5px] bg-slate-500 text-white rounded-xl px-[10px]"
+          className="border p-[5px] bg-slate-500 text-white rounded-xl px-[20px]"
           onClick={() => removeFromCart(id)}
         >
-          Remove
+          ━
         </button>
       </div>
     </div>

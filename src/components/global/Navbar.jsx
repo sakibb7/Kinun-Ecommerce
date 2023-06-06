@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { logo } from "../../assets";
 import { navLinks } from "../../constants";
+import { useContext } from "react";
+import { ShopContext } from "../../context/shop-context";
 
 //icons
 import { HiOutlineSearch } from "react-icons/hi";
@@ -9,8 +11,10 @@ import { FcLike } from "react-icons/fc";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
 export const Navbar = () => {
+  const { cartItem, getTotalCartItem } = useContext(ShopContext);
+  const totalItem = getTotalCartItem();
   return (
-    <nav>
+    <nav className="sticky top-0 z-10 bg-white">
       <div className="flex justify-between items-center max-w-screen-xl mx-auto py-[20px] block">
         <div className="">
           <img src={logo} alt="" />
@@ -29,7 +33,14 @@ export const Navbar = () => {
           <FaRegUser />
           <FcLike /> */}
           <Link to="/cart">
-            <AiOutlineShoppingCart />
+            <p className="relative">
+              <span className="bg-slate-100">
+                <AiOutlineShoppingCart />
+              </span>
+              <span className="absolute right-[-10px] top-[-10px] bg-mainColor text-white px-[5px] rounded-full text-[14px]">
+                {totalItem}
+              </span>
+            </p>
           </Link>
         </div>
       </div>
