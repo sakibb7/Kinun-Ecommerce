@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
 import "./App.css";
 import { Navbar } from "./components/global/Navbar";
@@ -28,6 +33,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/shop/:title" element={<SingleProductPage />} />
             <Route path="/:title" element={<SingleProductPage />} />
+            <Route path="/*" element={<Navigate to="/" replace />} />
           </Routes>
         </Router>
       </ShopContextProvider>

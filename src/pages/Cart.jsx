@@ -32,6 +32,17 @@ const Cart = () => {
           <p className="font-bold text-xl mr-[200px]">
             Subtotal:${totalAmount}{" "}
           </p>
+          {totalAmount < 2000 ? (
+            <p>
+              Add more products to your cart and receive Free Shipping for order
+              $2000!
+            </p>
+          ) : (
+            <p>
+              Congratulations! You got free shipping with your order greater
+              $2000
+            </p>
+          )}
           <div className="text-[16px] ">
             <button
               className="bg-slate-800 text-white p-3 rounded-[20px] mr-10"

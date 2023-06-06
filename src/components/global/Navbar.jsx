@@ -16,9 +16,11 @@ export const Navbar = () => {
   return (
     <nav className="sticky top-0 z-10 bg-white">
       <div className="flex justify-between items-center max-w-screen-xl mx-auto py-[20px] block">
-        <div className="">
-          <img src={logo} alt="" />
-        </div>
+        <Link to="/">
+          <div className="cursor-pointer">
+            <img src={logo} alt="" />
+          </div>
+        </Link>
         <div className="">
           <ul className="flex justify-start intems-center gap-10 font-[500] text-[16px]">
             {navLinks.map(({ _id, title, link }) => (
@@ -29,9 +31,9 @@ export const Navbar = () => {
           </ul>
         </div>
         <div className="flex justify-center items-center gap-4 text-[22px]">
-          {/* <HiOutlineSearch />
+          <HiOutlineSearch />
           <FaRegUser />
-          <FcLike /> */}
+          <FcLike />
           <Link to="/cart">
             <p className="relative">
               <span className="bg-slate-100">
