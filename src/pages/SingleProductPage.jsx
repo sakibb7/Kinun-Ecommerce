@@ -3,17 +3,11 @@ import { useParams } from "react-router-dom";
 import { products } from "../constants";
 import { ShopContext } from "../context/shop-context";
 
-const SingleProductPage = ({ id }) => {
+const SingleProductPage = () => {
+  const { addToCart, cartItems, removeFromCart, updateCartItemCount } =
+    useContext(ShopContext);
   const { title } = useParams();
   const [bodyData, setBodyData] = useState("");
-
-  const {
-    addToCart,
-    cartItems,
-    removeFromCart,
-    updateCartItemCount,
-    getTotalCartAmount,
-  } = useContext(ShopContext);
 
   useEffect(() => {
     const productData = products.filter((product) => product.title === title);
@@ -36,17 +30,20 @@ const SingleProductPage = ({ id }) => {
             ${bodyData.originalPrice}
           </p>
           <p className="text-ashColor">${bodyData.discountedPrice}</p>
+
           <div className="text-[14px] font-[400] p-2 rounded-lg flex justify-between items-center gap-2 text-[18px]">
-            <button className="m-2" onClick={() => addToCart(id)}>
+            <button className="m-2" onClick={() => addToCart(bodyData.id)}>
               +
             </button>
             <input
-              value={cartItems[id]}
-              onChange={(e) => updateCartItemCount(Number(e.target.value), id)}
+              value={cartItems[bodyData.id]}
+              onChange={(e) =>
+                updateCartItemCount(Number(e.target.value), bodyData.id)
+              }
               className="text-center border w-[40px] bg-slate-200 py-2"
             />
 
-            <button className="m-2" onClick={() => removeFromCart(id)}>
+            <button className="m-2" onClick={() => removeFromCart(bodyData.id)}>
               ━
             </button>
           </div>

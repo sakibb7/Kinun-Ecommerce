@@ -6,7 +6,6 @@ import { ShopContext } from "../../context/shop-context";
 const Products = () => {
   const { addToCart, cartItems, removeFromCart, updateCartItemCount } =
     useContext(ShopContext);
-
   return (
     <div className="max-w-screen-xl mx-auto pb-16">
       <h2 className="text-2xl my-8 py-1 border-l-[3px] border-mainColor">
