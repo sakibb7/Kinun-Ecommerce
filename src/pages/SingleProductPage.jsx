@@ -14,6 +14,7 @@ const SingleProductPage = () => {
 
     setBodyData(productData[0]);
   }, []);
+
   return (
     <div className="max-w-screen-xl mx-auto flex justify-center items-center gap-10">
       <img className="bg-slate-50" src={bodyData.image} alt="" />
